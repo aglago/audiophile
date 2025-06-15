@@ -41,7 +41,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
 
   if (variant === 'featured') {
     return (
-      <div className="relative overflow-hidden rounded-lg bg-gradient-to-r from-orange-500 to-orange-600 text-white">
+      <div className="relative overflow-hidden rounded-lg bg-gradient-to-r from-primary to-orange-600 text-white">
         <div className="px-6 py-8 sm:px-8 sm:py-12 lg:px-12 lg:py-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div className="space-y-6">
@@ -99,7 +99,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
               className="object-contain group-hover:scale-105 transition-transform duration-200"
             />
             {product.featured && (
-              <Badge className="absolute top-2 left-2 bg-orange-500">
+              <Badge className="absolute top-2 left-2 bg-primary">
                 Featured
               </Badge>
             )}
@@ -135,7 +135,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
             className="object-contain group-hover:scale-105 transition-transform duration-200"
           />
           {product.featured && (
-            <Badge className="absolute top-3 left-3 bg-orange-500">
+            <Badge className="absolute top-3 left-3 bg-primary">
               Featured
             </Badge>
           )}
@@ -166,7 +166,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
             <Button 
               onClick={handleAddToCart}
               disabled={!product.inStock}
-              className="bg-orange-500 hover:bg-orange-600"
+              className="bg-primary hover:bg-orange-600"
             >
               {product.inStock ? 'Add to Cart' : 'Out of Stock'}
             </Button>

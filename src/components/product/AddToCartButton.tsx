@@ -49,7 +49,7 @@ export const AddToCartButton: React.FC<AddToCartButtonProps> = ({
       <Button
         onClick={handleAddToCart}
         disabled={!product.inStock}
-        className="bg-orange-500 hover:bg-orange-600 px-8"
+        className="bg-primary hover:bg-orange-600 px-8"
         size="lg"
       >
         {product.inStock ? 'Add to Cart' : 'Out of Stock'}

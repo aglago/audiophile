@@ -529,7 +529,7 @@ export default function CheckoutPage() {
                 </CardHeader>
                 <CardContent>
                   <textarea
-                    className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                    className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
                     rows={4}
                     placeholder="Any special instructions for your order..."
                     {...register("notes")}
@@ -545,7 +545,7 @@ export default function CheckoutPage() {
 
                 <Button
                   type="submit"
-                  className="w-full bg-orange-500 hover:bg-orange-600"
+                  className="w-full bg-primary hover:bg-orange-600"
                   size="lg"
                   disabled={isSubmitting}
                 >
@@ -625,7 +625,7 @@ function OrderConfirmationModal({ orderDetails }: OrderConfirmationModalProps) {
             Continue Shopping
           </Button>
           <Button
-            className="flex-1 bg-orange-500 hover:bg-orange-600"
+            className="flex-1 bg-primary hover:bg-orange-600"
             onClick={() => router.push(`/orders/${orderDetails.orderId}`)}
           >
             View Order

@@ -107,7 +107,7 @@ export default async function HomePage() {
                   </h3>
                   <Button
                     variant="outline"
-                    className="group-hover:bg-orange-500 group-hover:text-white group-hover:border-orange-500"
+                    className="group-hover:bg-primary group-hover:text-white group-hover:border-primary"
                   >
                     Shop {category.name}
                   </Button>
@@ -124,7 +124,7 @@ export default async function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
-                Bringing you the <span className="text-orange-500">best</span>{" "}
+                Bringing you the <span className="text-primary">best</span>{" "}
                 audio gear
               </h2>
               <p className="text-lg text-gray-600">

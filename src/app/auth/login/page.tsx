@@ -75,7 +75,7 @@ export default function LoginPage() {
           </h2>
           <p className="mt-2 text-gray-600">
             Or{' '}
-            <Link href="/auth/register" className="text-orange-600 hover:text-orange-500">
+            <Link href="/auth/register" className="text-orange-600 hover:text-primary">
               create a new account
             </Link>
           </p>
@@ -117,7 +117,7 @@ export default function LoginPage() {
 
               <Button
                 type="submit"
-                className="w-full bg-orange-500 hover:bg-orange-600"
+                className="w-full bg-primary hover:bg-orange-600"
                 disabled={isLoading}
               >
                 {isLoading ? (
@@ -169,7 +169,7 @@ export default function LoginPage() {
             </Button>
 
             <div className="text-center">
-              <Link href="/auth/forgot-password" className="text-sm text-orange-600 hover:text-orange-500">
+              <Link href="/auth/forgot-password" className="text-sm text-orange-600 hover:text-primary">
                 Forgot your password?
               </Link>
             </div>

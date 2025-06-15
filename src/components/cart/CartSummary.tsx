@@ -65,7 +65,7 @@ export const CartSummary: React.FC<CartSummaryProps> = ({
       
       {showCheckoutButton && (
         <Button 
-          className="w-full mt-6 bg-orange-500 hover:bg-orange-600"
+          className="w-full mt-6 bg-primary hover:bg-orange-600"
           size="lg"
           onClick={onCheckout}
         >

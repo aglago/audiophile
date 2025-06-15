@@ -89,7 +89,7 @@ export const Pagination: React.FC<PaginationProps> = ({
                 onClick={() => navigateToPage(page as number)}
                 className={cn(
                   "min-w-[2.5rem]",
-                  currentPage === page && "bg-orange-500 hover:bg-orange-600"
+                  currentPage === page && "bg-primary hover:bg-orange-600"
                 )}
               >
                 {page}

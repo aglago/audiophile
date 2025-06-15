@@ -37,13 +37,13 @@ export const Footer = () => {
               and sound specialists who are devoted to helping you get the most out of personal audio.
             </p>
             <div className="flex space-x-4 mt-6">
-              <Link href="#" className="text-gray-400 hover:text-orange-500 transition-colors">
+              <Link href="#" className="text-gray-400 hover:text-primary transition-colors">
                 <Facebook className="h-6 w-6" />
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-orange-500 transition-colors">
+              <Link href="#" className="text-gray-400 hover:text-primary transition-colors">
                 <Twitter className="h-6 w-6" />
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-orange-500 transition-colors">
+              <Link href="#" className="text-gray-400 hover:text-primary transition-colors">
                 <Instagram className="h-6 w-6" />
               </Link>
             </div>

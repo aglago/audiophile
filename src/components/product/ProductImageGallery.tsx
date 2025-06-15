@@ -48,7 +48,7 @@ export const ProductImageGallery: React.FC<ProductImageGalleryProps> = ({
               className={cn(
                 "relative h-20 bg-gray-50 rounded-md overflow-hidden border-2 transition-colors",
                 selectedImage === index
-                  ? "border-orange-500"
+                  ? "border-primary"
                   : "border-transparent hover:border-gray-300"
               )}
             >

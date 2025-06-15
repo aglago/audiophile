@@ -46,7 +46,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
             <div className="space-y-6">
               <div>
                 {product.featured && (
-                  <Badge className="mb-4 bg-orange-500">Featured</Badge>
+                  <Badge className="mb-4 bg-primary">Featured</Badge>
                 )}
                 <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
                   {product.name}

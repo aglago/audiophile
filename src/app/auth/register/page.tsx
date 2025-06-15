@@ -63,7 +63,7 @@ export default function RegisterPage() {
           </h2>
           <p className="mt-2 text-gray-600">
             Or{' '}
-            <Link href="/auth/login" className="text-orange-600 hover:text-orange-500">
+            <Link href="/auth/login" className="text-orange-600 hover:text-primary">
               sign in to your existing account
             </Link>
           </p>
@@ -133,7 +133,7 @@ export default function RegisterPage() {
 
               <Button
                 type="submit"
-                className="w-full bg-orange-500 hover:bg-orange-600"
+                className="w-full bg-primary hover:bg-orange-600"
                 disabled={isLoading}
               >
                 {isLoading ? (
@@ -149,11 +149,11 @@ export default function RegisterPage() {
 
             <div className="mt-6 text-center text-sm text-gray-600">
               By creating an account, you agree to our{' '}
-              <Link href="/terms" className="text-orange-600 hover:text-orange-500">
+              <Link href="/terms" className="text-orange-600 hover:text-primary">
                 Terms of Service
               </Link>{' '}
               and{' '}
-              <Link href="/privacy" className="text-orange-600 hover:text-orange-500">
+              <Link href="/privacy" className="text-orange-600 hover:text-primary">
                 Privacy Policy
               </Link>
             </div>
