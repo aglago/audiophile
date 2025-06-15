@@ -3,7 +3,6 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import GoogleProvider from "next-auth/providers/google";
 import connectDB from "@/lib/db";
 import { User as UserModel } from "@/models/User";
-import { loginSchema } from "@/lib/validation";
 
 export const authOptions: AuthOptions = {
   providers: [
