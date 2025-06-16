@@ -71,70 +71,73 @@ export default async function HomePage() {
       </section>
 
       {/* Category Showcase */}
-      <section className="py-12 sm:py-16 lg:py-24">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14 lg:gap-8">
-      {[
-        {
-          name: "Headphones",
-          image: "/assets/product-xx99-mark-one-headphones/mobile/image-category-page-preview.jpg",
-          href: "/products?category=headphones",
-        },
-        {
-          name: "Speakers", 
-          image: "/assets/product-zx9-speaker/mobile/image-category-page-preview.jpg",
-          href: "/products?category=speakers",
-        },
-        {
-          name: "Earphones",
-          image: "/assets/product-yx1-earphones/mobile/image-category-page-preview.jpg", 
-          href: "/products?category=earphones",
-        },
-      ].map((category) => (
-        <Link 
-          key={category.name} 
-          href={category.href} 
-          className="group block focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-lg"
-        >
-          <div className="relative flex flex-col items-center justify-end bg-gray-100 rounded-lg p-6 sm:p-8 text-center h-40 sm:h-44 lg:h-52 transition-all duration-300 hover:shadow-lg hover:bg-gray-50">
-            {/* Image container with better positioning */}
-            <div className="absolute -top-8 sm:-top-10 left-1/2 transform -translate-x-1/2 z-10">
-              <div className="relative w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28">
-                <Image
-                  src={category.image}
-                  alt={`${category.name} category`}
-                  fill
-                  sizes="(max-width: 640px) 80px, (max-width: 1024px) 96px, 112px"
-                  className="object-contain transition-transform duration-300 group-hover:scale-105"
-                  priority
-                />
-              </div>
-            </div>
-            
-            {/* Content */}
-            <div className="mt-auto space-y-3 sm:space-y-4">
-              <h3 className="text-lg sm:text-xl font-bold text-gray-900 tracking-wide">
-                {category.name}
-              </h3>
-              
-              <div className="inline-flex items-center gap-2 text-sm sm:text-base font-medium text-gray-700 group-hover:text-primary transition-colors duration-200">
-                <span>Shop</span>
-                <div className="w-2 h-2 relative">
-                  <Image
-                    alt="Arrow right"
-                    src="/assets/shared/desktop/icon-arrow-right.svg"
-                    fill
-                    className="object-contain transition-transform duration-200 group-hover:translate-x-1"
-                  />
+      <section className="py-24 md:py-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-14 md:gap-2 lg:gap-7">
+            {[
+              {
+                name: "Headphones",
+                image:
+                  "/assets/product-xx99-mark-one-headphones/mobile/image-category-page-preview.jpg",
+                href: "/products?category=headphones",
+              },
+              {
+                name: "Speakers",
+                image:
+                  "/assets/product-zx9-speaker/mobile/image-category-page-preview.jpg",
+                href: "/products?category=speakers",
+              },
+              {
+                name: "Earphones",
+                image:
+                  "/assets/product-yx1-earphones/mobile/image-category-page-preview.jpg",
+                href: "/products?category=earphones",
+              },
+            ].map((category) => (
+              <Link
+                key={category.name}
+                href={category.href}
+                className="group block focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-lg"
+              >
+                <div className="relative flex flex-col items-center justify-end bg-gray-100 rounded-lg p-6 sm:p-8 text-center h-40 sm:h-44 lg:h-52 transition-all duration-300 hover:shadow-lg hover:bg-gray-50">
+                  {/* Image container with better positioning */}
+                  <div className="absolute -top-8 sm:-top-10 left-1/2 transform -translate-x-1/2 z-10">
+                    <div className="relative w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28">
+                      <Image
+                        src={category.image}
+                        alt={`${category.name} category`}
+                        fill
+                        sizes="(max-width: 640px) 80px, (max-width: 1024px) 96px, 112px"
+                        className="object-contain transition-transform duration-300 group-hover:scale-105"
+                        priority
+                      />
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className="mt-auto space-y-3 sm:space-y-4">
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 tracking-wide">
+                      {category.name}
+                    </h3>
+
+                    <div className="inline-flex items-center gap-2 text-sm sm:text-base font-medium text-gray-700 group-hover:text-primary transition-colors duration-200">
+                      <span>Shop</span>
+                      <div className="w-2 h-2 relative">
+                        <Image
+                          alt="Arrow right"
+                          src="/assets/shared/desktop/icon-arrow-right.svg"
+                          fill
+                          className="object-contain transition-transform duration-200 group-hover:translate-x-1"
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
+              </Link>
+            ))}
           </div>
-        </Link>
-      ))}
-    </div>
-  </div>
-</section>
+        </div>
+      </section>
 
       {/* About Section */}
       <section className="py-16 lg:py-24">
