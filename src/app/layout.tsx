@@ -64,8 +64,8 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body className={manrope.variable}>
         <ClientSessionProvider session={session}>
+      <body className={manrope.variable}>
           <div className="min-h-screen flex flex-col">
             {!isHomePage && <Header />}
             <main className="flex-1">
@@ -84,8 +84,8 @@ export default async function RootLayout({
               },
             }}
           />
-        </ClientSessionProvider>
       </body>
+        </ClientSessionProvider>
     </html>
   );
 }
