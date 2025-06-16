@@ -545,7 +545,7 @@ export default function CheckoutPage() {
 
                 <Button
                   type="submit"
-                  className="w-full bg-primary hover:bg-orange-600"
+                  className="w-full bg-primary hover:bg-primary"
                   size="lg"
                   disabled={isSubmitting}
                 >
@@ -625,7 +625,7 @@ function OrderConfirmationModal({ orderDetails }: OrderConfirmationModalProps) {
             Continue Shopping
           </Button>
           <Button
-            className="flex-1 bg-primary hover:bg-orange-600"
+            className="flex-1 bg-primary hover:bg-primary"
             onClick={() => router.push(`/orders/${orderDetails.orderId}`)}
           >
             View Order

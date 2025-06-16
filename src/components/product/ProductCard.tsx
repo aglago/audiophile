@@ -41,7 +41,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
 
   if (variant === 'featured') {
     return (
-      <div className="relative overflow-hidden rounded-lg bg-gradient-to-r from-primary to-orange-600 text-white">
+      <div className="relative overflow-hidden rounded-lg bg-gradient-to-r from-primary to-primary text-white">
         <div className="px-6 py-8 sm:px-8 sm:py-12 lg:px-12 lg:py-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div className="space-y-6">
@@ -58,14 +58,14 @@ export const ProductCard: React.FC<ProductCardProps> = ({
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href={`/products/${product._id}`}>
-                  <Button size="lg" variant="secondary" className="bg-white text-orange-600 hover:bg-gray-100">
+                  <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-gray-100">
                     See Product
                   </Button>
                 </Link>
                 <Button 
                   size="lg" 
                   variant="outline" 
-                  className="border-white text-white hover:bg-white hover:text-orange-600"
+                  className="border-white text-white hover:bg-white hover:text-primary"
                   onClick={handleAddToCart}
                   disabled={!product.inStock}
                 >
@@ -105,7 +105,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
             )}
           </div>
           <div className="p-4">
-            <h3 className="font-semibold text-gray-900 group-hover:text-orange-600 transition-colors">
+            <h3 className="font-semibold text-gray-900 group-hover:text-primary transition-colors">
               {product.name}
             </h3>
             <p className="text-2xl font-bold text-gray-900 mt-2">
@@ -150,7 +150,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
         
         <div className="p-6">
           <div className="flex items-start justify-between mb-2">
-            <h3 className="text-lg font-semibold text-gray-900 group-hover:text-orange-600 transition-colors line-clamp-2">
+            <h3 className="text-lg font-semibold text-gray-900 group-hover:text-primary transition-colors line-clamp-2">
               {product.name}
             </h3>
           </div>
@@ -166,7 +166,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
             <Button 
               onClick={handleAddToCart}
               disabled={!product.inStock}
-              className="bg-primary hover:bg-orange-600"
+              className="bg-primary hover:bg-primary"
             >
               {product.inStock ? 'Add to Cart' : 'Out of Stock'}
             </Button>
