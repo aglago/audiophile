@@ -121,7 +121,6 @@ const ProductSchema = new Schema<IProduct>({
   sku: {
     type: String,
     required: [true, 'SKU is required'],
-    unique: true,
     uppercase: true,
     trim: true,
     minlength: [3, 'SKU must be at least 3 characters'],
