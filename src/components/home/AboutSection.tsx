@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const AboutSection: React.FC = () => {
   return (
-    <section className="py-32 md:py-24 lg:py-52">
+    <section className="pb-32 md:pb-24 lg:pb-52">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row-reverse gap-12 items-center justify-center lg:justify-between">
           {/* Image */}

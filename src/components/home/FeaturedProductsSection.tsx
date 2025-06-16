@@ -4,7 +4,7 @@ import Link from "next/link";
 const FeaturedProductsSection = () => {
   return (
     <section className="">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 md:pt-32 pb-32 md:pb-24 lg:pb-52">
         <div className="space-y-6 lg:space-y-8">
           {/* ZX9 Speaker - Hero Featured Product */}
           <div className="relative bg-primary rounded-lg overflow-hidden min-h-[600px] lg:min-h-[560px] flex items-center justify-center">

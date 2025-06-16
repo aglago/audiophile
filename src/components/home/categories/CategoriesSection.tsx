@@ -29,7 +29,7 @@ const CategoriesSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 md:py-32">
+    <section className="pt-24 md:pt-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-14 md:gap-2 lg:gap-7">
           {categories.map((category) => (
