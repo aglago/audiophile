@@ -6,7 +6,7 @@ const AboutSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row-reverse gap-12 items-center justify-center lg:justify-between">
           {/* Image */}
-          <div className="relative h-80  w-[540px] lg:h-[588px]">
+          <div className="relative h-80 w-full lg:max-w-[540px] lg:h-[588px]">
             <Image
               src="/assets/shared/desktop/image-best-gear.jpg"
               alt="About Audiophile"
