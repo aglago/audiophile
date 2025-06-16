@@ -11,19 +11,19 @@ const CategoriesSection: React.FC = () => {
     {
       name: "Headphones",
       image:
-        "/assets/product-xx99-mark-one-headphones/mobile/image-category-page-preview.jpg",
+        "/assets/shared/desktop/image-category-thumbnail-headphones.png",
       href: "/products?category=headphones",
     },
     {
       name: "Speakers",
       image:
-        "/assets/product-zx9-speaker/mobile/image-category-page-preview.jpg",
+        "/assets/shared/desktop/image-category-thumbnail-speakers.png",
       href: "/products?category=speakers",
     },
     {
       name: "Earphones",
       image:
-        "/assets/product-yx1-earphones/mobile/image-category-page-preview.jpg",
+        "/assets/shared/desktop/image-category-thumbnail-earphones.png",
       href: "/products?category=earphones",
     },
   ];

@@ -21,8 +21,8 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ name, image, href }) => {
               src={image}
               alt={`${name} category`}
               fill
-              sizes="(max-width: 640px) 80px, (max-width: 1024px) 96px, 112px"
-              className="object-contain transition-transform duration-300 group-hover:scale-105"
+              sizes="(max-width: 640px) 104px, 160px"
+              className="object-contain transition-transform duration-300 scale-150 group-hover:scale-105"
               priority
             />
           </div>
