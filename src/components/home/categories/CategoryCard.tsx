@@ -33,7 +33,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ name, image, href }) => {
           <h3 className="text-lg sm:text-xl font-bold text-gray-900 tracking-wide">
             {name}
           </h3>
-          <div className="inline-flex items-center gap-2 text-sm sm:text-base font-medium text-gray-700 group-hover:text-primary transition-colors duration-200">
+          <div className="inline-flex items-center gap-2 text-sm sm:text-base font-medium text-black/50 group-hover:text-primary transition-colors duration-200">
             <span>Shop</span>
             <div className="w-2 h-2 relative">
               <Image

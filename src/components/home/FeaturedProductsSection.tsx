@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Button } from "../ui/button";
 
 const FeaturedProductsSection = () => {
   return (
@@ -45,11 +46,9 @@ const FeaturedProductsSection = () => {
                   Upgrade to premium speakers that are phenomenally built to
                   deliver truly remarkable sound.
                 </p>
-                <Link
-                  href="/products/zx9-speaker"
-                  className="inline-block bg-black text-white px-8 py-4 font-bold text-sm tracking-wider uppercase hover:bg-[#4C4C4C] transition-colors duration-200"
-                >
-                  See Product
+
+                <Link href="/products/zx9-speaker">
+                  <Button size={"lg"}>See Product</Button>
                 </Link>
               </div>
             </div>
@@ -68,11 +67,8 @@ const FeaturedProductsSection = () => {
                 <h2 className="text-3xl sm:text-4xl font-bold text-black mb-6 lg:mb-8 tracking-wide">
                   ZX7 SPEAKER
                 </h2>
-                <Link
-                  href="/products/zx7-speaker"
-                  className="inline-block border-2 border-black text-black px-8 py-3 font-bold text-sm tracking-wider uppercase hover:bg-black hover:text-white transition-all duration-200"
-                >
-                  See Product
+                <Link href="/products/zx7-speaker">
+                  <Button size={"lg"}>See Product</Button>
                 </Link>
               </div>
             </div>
@@ -96,11 +92,8 @@ const FeaturedProductsSection = () => {
                 <h2 className="text-3xl sm:text-4xl font-bold text-black mb-6 lg:mb-8 tracking-wide">
                   YX1 EARPHONES
                 </h2>
-                <Link
-                  href="/products/yx1-earphones"
-                  className="inline-block border-2 border-black text-black px-8 py-3 font-bold text-sm tracking-wider uppercase hover:bg-black hover:text-white transition-all duration-200"
-                >
-                  See Product
+                <Link href="/products/yx1-earphones">
+                  <Button size={"lg"}>See Product</Button>
                 </Link>
               </div>
             </div>
