@@ -3,9 +3,7 @@ import productsData from '@/data/data.json';
 import { notFound } from 'next/navigation';
 
 interface PageProps {
-  params: {
-    slug: string;
-  };
+  params: Promise<{ slug: string }>;
 }
 
 export default async function ProductPage({ params }: PageProps) {
