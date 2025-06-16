@@ -5,6 +5,7 @@
 
 @theme inline {
   --color-primary-hover: var(--primary-hover);
+  --color-gray-background: var(--gray-background);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -52,7 +53,7 @@
   --primary-foreground: oklch(100.00% 0.000 0);
   --primary-hover: oklch(81.72% 0.105 49.70);
   --muted-foreground: oklch(98.51% 0.000 0);
-  --muted-gray-foreground: oklch(95.81% 0.000 0);
+  --gray-background: oklch(95.81% 0.000 0);
 
   --destructive: oklch(55.46% 0.197 26.53);
 

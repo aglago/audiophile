@@ -43,18 +43,17 @@ export default async function HomePage() {
       </div>
 
       {/* Featured Products */}
-      <section className="py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Featured Products
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Discover our hand-picked selection of premium audio equipment
-            </p>
-          </div>
-
-          {featuredProducts.length > 0 && (
+      <section className={featuredProducts.length > 0 ? "py-16 lg:py-24" : ""}>
+        {featuredProducts.length > 0 && (
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                Featured Products
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Discover our hand-picked selection of premium audio equipment
+              </p>
+            </div>
             <div className="space-y-12">
               {/* First featured product - large showcase */}
               <ProductCard product={featuredProducts[0]} variant="featured" />
@@ -67,56 +66,75 @@ export default async function HomePage() {
                 />
               )}
             </div>
-          )}
-        </div>
+          </div>
+        )}
       </section>
 
       {/* Category Showcase */}
-      <section className="py-16 lg:py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Headphones",
-                image: "/category-headphones.png",
-                href: "/products?category=headphones",
-              },
-              {
-                name: "Speakers",
-                image: "/category-speakers.png",
-                href: "/products?category=speakers",
-              },
-              {
-                name: "Earphones",
-                image: "/category-earphones.png",
-                href: "/products?category=earphones",
-              },
-            ].map((category) => (
-              <Link key={category.name} href={category.href} className="group">
-                <div className="bg-white rounded-lg p-8 text-center hover:shadow-lg transition-all duration-200">
-                  <div className="relative h-32 mb-6">
-                    <Image
-                      src={category.image}
-                      alt={category.name}
-                      fill
-                      className="object-contain group-hover:scale-105 transition-transform duration-200"
-                    />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">
-                    {category.name}
-                  </h3>
-                  <Button
-                    variant="outline"
-                    className="group-hover:bg-primary group-hover:text-white group-hover:border-primary"
-                  >
-                    Shop {category.name}
-                  </Button>
+      <section className="py-12 sm:py-16 lg:py-24">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14 lg:gap-8">
+      {[
+        {
+          name: "Headphones",
+          image: "/assets/product-xx99-mark-one-headphones/mobile/image-category-page-preview.jpg",
+          href: "/products?category=headphones",
+        },
+        {
+          name: "Speakers", 
+          image: "/assets/product-zx9-speaker/mobile/image-category-page-preview.jpg",
+          href: "/products?category=speakers",
+        },
+        {
+          name: "Earphones",
+          image: "/assets/product-yx1-earphones/mobile/image-category-page-preview.jpg", 
+          href: "/products?category=earphones",
+        },
+      ].map((category) => (
+        <Link 
+          key={category.name} 
+          href={category.href} 
+          className="group block focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-lg"
+        >
+          <div className="relative flex flex-col items-center justify-end bg-gray-100 rounded-lg p-6 sm:p-8 text-center h-40 sm:h-44 lg:h-52 transition-all duration-300 hover:shadow-lg hover:bg-gray-50">
+            {/* Image container with better positioning */}
+            <div className="absolute -top-8 sm:-top-10 left-1/2 transform -translate-x-1/2 z-10">
+              <div className="relative w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28">
+                <Image
+                  src={category.image}
+                  alt={`${category.name} category`}
+                  fill
+                  sizes="(max-width: 640px) 80px, (max-width: 1024px) 96px, 112px"
+                  className="object-contain transition-transform duration-300 group-hover:scale-105"
+                  priority
+                />
+              </div>
+            </div>
+            
+            {/* Content */}
+            <div className="mt-auto space-y-3 sm:space-y-4">
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 tracking-wide">
+                {category.name}
+              </h3>
+              
+              <div className="inline-flex items-center gap-2 text-sm sm:text-base font-medium text-gray-700 group-hover:text-primary transition-colors duration-200">
+                <span>Shop</span>
+                <div className="w-2 h-2 relative">
+                  <Image
+                    alt="Arrow right"
+                    src="/assets/shared/desktop/icon-arrow-right.svg"
+                    fill
+                    className="object-contain transition-transform duration-200 group-hover:translate-x-1"
+                  />
                 </div>
-              </Link>
-            ))}
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </Link>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* About Section */}
       <section className="py-16 lg:py-24">
