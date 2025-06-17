@@ -246,7 +246,7 @@ const CheckoutPage = () => {
                               value="e-money"
                               checked={formData.paymentMethod === "e-money"}
                               onChange={handleInputChange}
-                              className="custom-radio-dot focus:ring-1 focus:ring-[#CFCFCF]"
+                              className="custom-radio-dot ring-1 ring-[#CFCFCF]"
                             />
                             <span className="ml-3 text-sm font-medium text-black">
                               e-Money
@@ -259,7 +259,7 @@ const CheckoutPage = () => {
                               value="cash"
                               checked={formData.paymentMethod === "cash"}
                               onChange={handleInputChange}
-                              className="custom-radio-dot focus:ring-1 focus:ring-[#CFCFCF]"
+                              className="custom-radio-dot ring-1 ring-[#CFCFCF]"
                             />
                             <span className="ml-3 text-sm font-medium text-black">
                               Cash on Delivery
