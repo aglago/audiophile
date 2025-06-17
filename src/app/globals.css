@@ -193,3 +193,30 @@
 .no-scrollbar {
   scrollbar-width: none;
 }
+
+.custom-radio-dot {
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid #CFCFCF;
+  border-radius: 50%;
+  background-color: white;
+  position: relative;
+}
+
+.custom-radio-dot:checked {
+  background-color: white;
+  border: none;
+}
+
+.custom-radio-dot:checked::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+}

@@ -239,27 +239,27 @@ const CheckoutPage = () => {
                           Payment Method
                         </label>
                         <div className="space-y-3 flex-1 w-full">
-                          <label className="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:border-primary transition-colors">
+                          <label className="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:border-primary transition-colors has-[:checked]:border-primary">
                             <input
                               type="radio"
                               name="paymentMethod"
                               value="e-money"
                               checked={formData.paymentMethod === "e-money"}
                               onChange={handleInputChange}
-                              className="text-primary focus:ring-primary w-fit"
+                              className="custom-radio-dot focus:ring-1 focus:ring-[#CFCFCF]"
                             />
                             <span className="ml-3 text-sm font-medium text-black">
                               e-Money
                             </span>
                           </label>
-                          <label className="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:border-primary transition-colors">
+                          <label className="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:border-primary transition-colors has-[:checked]:border-primary">
                             <input
                               type="radio"
                               name="paymentMethod"
                               value="cash"
                               checked={formData.paymentMethod === "cash"}
                               onChange={handleInputChange}
-                              className="text-primary focus:ring-primary w-fit"
+                              className="custom-radio-dot focus:ring-1 focus:ring-[#CFCFCF]"
                             />
                             <span className="ml-3 text-sm font-medium text-black">
                               Cash on Delivery
@@ -305,7 +305,8 @@ const CheckoutPage = () => {
                         </div>
                       )}
                     </div>
-                    <div className="flex items-center gap-8 pt-8">
+                    {formData.paymentMethod === "cash" && (
+                      <div className="flex items-center gap-8 pt-8">
                       <CashOnDelivery />
                       <p className="text-black/50 text-lg">
                         The &apos;Cash on Delivery&apos; option enables you to
@@ -314,6 +315,7 @@ const CheckoutPage = () => {
                         that your order will not be cancelled.
                       </p>
                     </div>
+                    )}
                   </div>
                 </form>
               </div>
@@ -388,7 +390,9 @@ const CheckoutPage = () => {
                 </div>
 
                 <Link href="/products" onClick={handleSubmit}>
-                  <Button size={"lg"} className="w-full">Continue & Pay</Button>
+                  <Button size={"lg"} className="w-full">
+                    Continue & Pay
+                  </Button>
                 </Link>
               </div>
             </div>
