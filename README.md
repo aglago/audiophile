@@ -9,7 +9,7 @@ A modern full-stack e-commerce application built with Next.js, TypeScript, and M
 
 ## Tech Stack
 
-- **Frontend:** Next.js 14+ with App Router
+- **Frontend:** Next.js 15+ with App Router
 - **Language:** TypeScript
 - **Database:** MongoDB with Mongoose ODM
 - **Authentication:** NextAuth.js v5 (Auth.js)
@@ -112,13 +112,13 @@ This e-commerce application now includes:
 
 ### 🏆 Project Assessment Criteria Met
 
-✅ **Responsive Design**: Mobile-first with Tailwind CSS
-✅ **Interactive Elements**: Hover states and smooth transitions
-✅ **Shopping Cart**: Full CRUD functionality with persistence
-✅ **Form Validation**: Real-time validation with helpful messages
-✅ **Order Calculations**: Accurate totals with shipping and VAT
-✅ **Order Confirmation**: Modal with order summary
-✅ **Bonus**: Cart persistence and full-stack implementation
+✅ **Responsive Design**: Mobile-first with Tailwind CSS  
+✅ **Interactive Elements**: Hover states and smooth transitions  
+✅ **Shopping Cart**: Full CRUD functionality with persistence  
+✅ **Form Validation**: Real-time validation with helpful messages  
+✅ **Order Calculations**: Accurate totals with shipping and VAT  
+✅ **Order Confirmation**: Modal with order summary  
+✅ **Bonus**: Cart persistence and full-stack implementation  
 
 This project demonstrates modern React/Next.js development practices with a focus on user experience, type safety, and scalable architecture.
 
