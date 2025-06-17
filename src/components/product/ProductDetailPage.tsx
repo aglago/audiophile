@@ -6,6 +6,7 @@ import { useState } from "react";
 import CategoriesSection from "../home/categories/CategoriesSection";
 import AboutSection from "../home/AboutSection";
 import { Button } from "../ui/button";
+import { useCartStore } from '@/lib/cart-store';
 
 interface ProductImage {
   mobile: string;
@@ -46,6 +47,8 @@ interface ProductDetailPageProps {
 }
 
 const ProductDetailPage = ({ product }: ProductDetailPageProps) => {
+
+const addToCart = useCartStore((state) => state.addItem);
   const [quantity, setQuantity] = useState(1);
 
   const handleQuantityChange = (action: "increment" | "decrement") => {
@@ -57,8 +60,14 @@ const ProductDetailPage = ({ product }: ProductDetailPageProps) => {
   };
 
   const handleAddToCart = () => {
-    console.log(`Added ${quantity} ${product.name} to cart`);
-  };
+  addToCart({
+    id: product.id,
+    slug: product.slug,
+    name: product.name,
+    price: product.price,
+    image: product.image.mobile
+  });
+};
 
   // Clean image paths (remove ./ prefix)
   const cleanImagePath = (path: string) => path.replace("./", "/");

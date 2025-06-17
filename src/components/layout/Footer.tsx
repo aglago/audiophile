@@ -69,7 +69,7 @@ export const Footer = () => {
               Copyright {new Date().getFullYear()}. All Rights Reserved
             </p>
 
-            <div className="flex space-x-4 mt-6">
+            <div className="flex space-x-4 mt-6 place-items-center">
               <Link
                 href="#"
                 className="group text-white hover:text-primary transition-colors"

@@ -8,9 +8,9 @@
     "start": "next start",
     "lint": "next lint"
   },
-  "browser":{
-"child_process": false
-} ,
+  "browser": {
+    "child_process": false
+  },
   "dependencies": {
     "@auth/mongodb-adapter": "^3.9.1",
     "@hookform/resolvers": "^5.1.1",

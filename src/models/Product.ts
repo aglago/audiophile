@@ -57,6 +57,7 @@ export interface IProduct extends Document {
   subcategory?: string;
   stock: number;
   sku: string;
+  slug: string;
   brand?: string;
   specifications: ProductSpecifications;
   tags: ProductTag[];
@@ -64,7 +65,6 @@ export interface IProduct extends Document {
   featured: boolean;
   createdAt: Date;
   updatedAt: Date;
-  // Virtual field
   inStock: boolean;
 }
 

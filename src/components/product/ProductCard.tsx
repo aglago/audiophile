@@ -19,19 +19,18 @@ export const ProductCard: React.FC<ProductCardProps> = ({
   product, 
   variant = 'default' 
 }) => {
-  // ✅ Fixed: Properly typed store selector
   const addToCart = useCartStore((state) => state.addItem);
 
   const handleAddToCart = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
     
-    // ✅ Fixed: Properly typed cart item
     const cartItem: Omit<CartItem, 'quantity'> & { quantity?: number } = {
-      id: (product._id as string | number).toString(),
+      id: (product._id as number),
       name: product.name,
       price: product.price,
       image: product.images[0],
+      slug: product.slug,
       quantity: 1
     };
     
