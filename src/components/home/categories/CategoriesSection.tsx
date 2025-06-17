@@ -1,6 +1,10 @@
 import CategoryCard from "./CategoryCard";
 
-const CategoriesSection: React.FC = () => {
+interface CategoriesSectionProps {
+  onCategoryClick?: () => void;
+}
+
+const CategoriesSection: React.FC<CategoriesSectionProps> = ({ onCategoryClick }) => {
   interface Category {
     name: string;
     image: string;
@@ -38,6 +42,7 @@ const CategoriesSection: React.FC = () => {
               name={category.name}
               image={category.image}
               href={category.href}
+              onCategoryClick={onCategoryClick} 
             />
           ))}
         </div>

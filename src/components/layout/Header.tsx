@@ -16,6 +16,7 @@ export const Header = () => {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const [cartBounce, setCartBounce] = useState(false);
 
   const cartItemsCount = useCartStore((state) =>
     state.items.reduce(
@@ -24,17 +25,26 @@ export const Header = () => {
     )
   );
 
+  // Watch for cart changes
+  useEffect(() => {
+    if (cartItemsCount > 0) {
+      setCartBounce(true);
+      const timer = setTimeout(() => setCartBounce(false), 1000);
+      return () => clearTimeout(timer);
+    }
+  }, [cartItemsCount]);
+
   // Disable body scroll when mobile menu is open
   useEffect(() => {
     if (isMenuOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     }
-    
+
     // Cleanup on unmount
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     };
   }, [isMenuOpen]);
 
@@ -72,7 +82,12 @@ export const Header = () => {
 
           {/* Logo */}
           <Link href="/">
-            <Image alt="audiophile logo" src="/assets/shared/desktop/logo.svg" width={143} height={25} />
+            <Image
+              alt="audiophile logo"
+              src="/assets/shared/desktop/logo.svg"
+              width={143}
+              height={25}
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -109,7 +124,7 @@ export const Header = () => {
             <Button
               variant="ghost"
               size="sm"
-              className="relative text-white hover:bg-gray-800"
+              className={`relative text-white hover:bg-gray-800 ${cartBounce ? 'cart-bounce' : ''}`}
               onClick={() => setIsCartOpen(true)}
             >
               <CartIcon className="h-5 w-5" />
@@ -121,22 +136,20 @@ export const Header = () => {
             </Button>
           </div>
         </div>
-
-
       </div>
 
       {/* Mobile Navigation Overlay */}
       {isMenuOpen && (
         <>
           {/* Backdrop */}
-          <div 
-            className="fixed inset-0 bg-black/50 z-40 lg:hidden" 
+          <div
+            className="fixed inset-0 bg-black/50 z-40 lg:hidden"
             onClick={() => setIsMenuOpen(false)}
           />
           {/* Menu Content */}
           <div className="fixed left-0 top-24 right-0 bg-white z-50 lg:hidden max-h-screen overflow-y-auto">
             <div className="pb-9 md:pb-16">
-              <CategoriesSection />
+              <CategoriesSection onCategoryClick={() => setIsMenuOpen(false)} />
             </div>
           </div>
         </>

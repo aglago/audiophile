@@ -5,13 +5,15 @@ interface CategoryCardProps {
   name: string;
   image: string;
   href: string;
+  onCategoryClick ?: () => void;
 }
 
-const CategoryCard: React.FC<CategoryCardProps> = ({ name, image, href }) => {
+const CategoryCard: React.FC<CategoryCardProps> = ({ name, image, href, onCategoryClick }) => {
   return (
     <Link
       href={href}
       className="group block focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-lg"
+      onClick={onCategoryClick} 
     >
       <div className="relative flex flex-col items-center justify-end bg-gray-100 rounded-lg p-6 sm:p-8 text-center h-40 sm:h-44 lg:h-52 transition-all duration-300 hover:shadow-lg hover:bg-gray-50">
         {/* Image container */}
