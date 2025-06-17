@@ -16,7 +16,7 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Audiophile - Premium Audio Equipment",
+  title: "Audiophile - Premium Audio Equipments",
   description:
     "Discover premium audio equipment including headphones, speakers, and earphones. Experience the best in audio quality with Audiophile.",
   keywords:
