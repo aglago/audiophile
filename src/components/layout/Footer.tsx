@@ -4,6 +4,7 @@ import Facebook from "../icons/facebook";
 import Twitter from "../icons/twitter";
 import Instagram from "../icons/instagram";
 import Image from "next/image";
+import SocialLinks from "./SocialLinks";
 
 export const Footer = () => {
   const footerNavigation = {
@@ -53,40 +54,22 @@ export const Footer = () => {
             </div>
           </div>
 
-          <div>
-            <p className="mt-4 text-white/50 lg:max-w-md text-center md:text-left">
+          <div className="flex justify-between w-full">
+            <p className="text-[15px] text-white/50 lg:max-w-[540px] text-center md:text-left">
               Audiophile is an all in one stop to fulfill your audio needs.
               We&apos;re a small team of music lovers and sound specialists who
               are devoted to helping you get the most out of personal audio.
               Come and visit our demo facility - we&apos;re open 7 days a week.
             </p>
+            <SocialLinks className="hidden lg:flex items-end" />
           </div>
 
           <div className="flex flex-col md:flex-row items-center w-full md:justify-between gap-12">
-            <p className="text-white/50 font-bold text-sm">
+            <p className="text-white/50 font-bold text-[15px]">
               Copyright {new Date().getFullYear()}. All Rights Reserved
             </p>
 
-            <div className="flex space-x-4 mt-6 place-items-center">
-              <Link
-                href="#"
-                className="group text-white hover:text-primary transition-colors"
-              >
-                <Facebook className="group-hover:fill-primary" />
-              </Link>
-              <Link
-                href="#"
-                className="text-white hover:text-primary transition-colors"
-              >
-                <Twitter className="group-hover:fill-primary" />
-              </Link>
-              <Link
-                href="#"
-                className="text-white hover:text-primary transition-colors"
-              >
-                <Instagram className="group-hover:fill-primary" />
-              </Link>
-            </div>
+            <SocialLinks className="lg:hidden" />
           </div>
         </div>
       </div>
