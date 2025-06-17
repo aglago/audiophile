@@ -17,7 +17,7 @@ const AboutSection: React.FC = () => {
 
           {/* Text Content */}
           <div className="space-y-6  max-w-[327px] lg:max-w-[445px] md:max-w-[573px] text-center lg:text-left">
-            <h2 className="text-3xl lg:text-[40px] font-bold text-black tracking-[1px] leading-[38px] uppercase">
+            <h2 className="text-3xl md:text-[40px] font-bold text-black tracking-[1px] leading-[38px] uppercase">
               Bringing you the <span className="text-primary">best</span> audio
               gear
             </h2>
