@@ -43,7 +43,7 @@ export const useCartStore = create<CartStore>()(
             };
           } else {
             return {
-              items: [...state.items, { ...product, quantity: 1 }]
+              items: [...state.items, { ...product, quantity: product.quantity }]
             };
           }
         });

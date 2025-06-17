@@ -6,9 +6,9 @@ import { getAuthSession } from '@/lib/session';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Toaster } from 'sonner';
-import './globals.css';
 import { ClientSessionProvider } from '@/providers/ClientSessionProvider';
 import { headers } from 'next/headers';
+import './globals.css';
 
 const manrope = Manrope({
   variable: "--font-manrope",

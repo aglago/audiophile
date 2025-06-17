@@ -39,7 +39,7 @@ const CartModal: React.FC<CartModalProps> = ({ isOpen, onClose }) => {
       <div className="fixed inset-0 bg-black/50 z-50" onClick={onClose}>
         {/* Cart Modal */}
         <div
-          className="absolute top-20 right-4 sm:right-6 md:right-10 lg:right-40 w-full md:max-w-1/2 lg:max-w-96 bg-white rounded-lg p-6 md:p-8 shadow-xl"
+          className="absolute top-20 right-0 sm:right-6 md:right-10 lg:right-40 w-full md:max-w-1/2 lg:max-w-96 bg-white rounded-lg p-6 md:p-8 shadow-xl"
           onClick={(e) => e.stopPropagation()}
         >
           {/* Header */}

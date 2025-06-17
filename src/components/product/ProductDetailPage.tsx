@@ -7,6 +7,7 @@ import CategoriesSection from "../home/categories/CategoriesSection";
 import AboutSection from "../home/AboutSection";
 import { Button } from "../ui/button";
 import { useCartStore } from "@/lib/cart-store";
+import { toast } from "sonner";
 
 interface ProductImage {
   mobile: string;
@@ -67,9 +68,9 @@ const ProductDetailPage = ({ product }: ProductDetailPageProps) => {
       image: product.image.mobile,
       quantity
     });
+    toast.success(`Added ${product.name} to cart`);
   };
 
-  // Clean image paths (remove ./ prefix)
   const cleanImagePath = (path: string) => path.replace("./", "/");
 
   return (
