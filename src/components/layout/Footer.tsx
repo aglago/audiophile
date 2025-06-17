@@ -1,8 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import Facebook from "../icons/facebook";
-import Twitter from "../icons/twitter";
-import Instagram from "../icons/instagram";
 import Image from "next/image";
 import SocialLinks from "./SocialLinks";
 
