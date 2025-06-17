@@ -76,7 +76,7 @@ const ProductDetailPage = ({ product }: ProductDetailPageProps) => {
   return (
     <div className="min-h-screen">
       {/* Back Button */}
-      <div className="bg-white max-w-7xl mx-auto py-4">
+      <div className="bg-white max-w-7xl mx-auto p-4">
         <Button variant={"ghost"} onClick={() => window.history.back()}>
           Go Back
         </Button>
