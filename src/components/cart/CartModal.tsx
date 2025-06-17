@@ -47,12 +47,12 @@ const CartModal: React.FC<CartModalProps> = ({ isOpen, onClose }) => {
             <h2 className="text-lg font-bold text-black uppercase tracking-[1px]">
               Cart ({items.length})
             </h2>
-            <button
+            <Button
+            variant={"ghost"}
               onClick={clearCart}
-              className="text-sm text-black/30 underline hover:text-black/50 transition-colors"
             >
               Remove all
-            </button>
+            </Button>
           </div>
 
           {/* Empty cart spacing */}
@@ -64,7 +64,7 @@ const CartModal: React.FC<CartModalProps> = ({ isOpen, onClose }) => {
               {items.map((item) => (
                 <div key={item.id} className="flex items-center gap-4">
                   {/* Product Image */}
-                  <div className="relative w-16 h-16 bg-gray-100 rounded-lg overflow-hidden flex-shrink-0">
+                  <div className="relative w-16 h-16 bg-gray-background rounded-lg overflow-hidden flex-shrink-0">
                     <Image
                       src={cleanImagePath(item.image)}
                       alt={item.name}
@@ -84,7 +84,7 @@ const CartModal: React.FC<CartModalProps> = ({ isOpen, onClose }) => {
                   </div>
 
                   {/* Quantity Controls */}
-                  <div className="flex items-center bg-gray-100 rounded flex-shrink-0">
+                  <div className="flex items-center bg-gray-background rounded flex-shrink-0">
                     <Button
                       onClick={() => updateQuantity(item.id, item.quantity - 1)}
                       variant={"ghost"}
