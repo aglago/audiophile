@@ -242,7 +242,7 @@ const ProductDetailPage = ({ product }: ProductDetailPageProps) => {
                 {relatedProduct.name}
               </h3>
 
-              <Link href={`/products/${product.slug}`}>
+              <Link href={`/products/${relatedProduct.slug}`}>
                 <Button size={"lg"}>See Product</Button>
               </Link>
             </div>
