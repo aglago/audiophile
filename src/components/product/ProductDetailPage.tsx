@@ -66,7 +66,7 @@ const ProductDetailPage = ({ product }: ProductDetailPageProps) => {
       name: product.name,
       price: product.price,
       image: product.image.mobile,
-      quantity
+      quantity,
     });
     toast.success(`Added ${product.name} to cart`);
   };
@@ -101,6 +101,11 @@ const ProductDetailPage = ({ product }: ProductDetailPageProps) => {
 
           {/* Product Info */}
           <div className="space-y-6 lg:space-y-8">
+            {product.new && (
+              <span className="text-primary text-sm font-medium tracking-[10px] uppercase">
+                New Product
+              </span>
+            )}
             <h1 className="max-w-[300px] lg:max-w-[445px] text-3xl sm:text-4xl lg:text-5xl font-bold text-black tracking-wide uppercase">
               {product.name}
             </h1>
