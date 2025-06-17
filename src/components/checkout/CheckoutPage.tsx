@@ -112,7 +112,7 @@ const CheckoutPage = () => {
                             name="name"
                             value={formData.name}
                             onChange={handleInputChange}
-                            className="w-full h-full"
+                            className="w-full h-full text-black/40"
                             placeholder="Alexei Ward"
                             required
                           />
@@ -240,7 +240,7 @@ const CheckoutPage = () => {
                         </label>
                         <div className="space-y-3 flex-1 w-full">
                           <label className="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:border-primary transition-colors">
-                            <Input
+                            <input
                               type="radio"
                               name="paymentMethod"
                               value="e-money"
@@ -253,7 +253,7 @@ const CheckoutPage = () => {
                             </span>
                           </label>
                           <label className="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:border-primary transition-colors">
-                            <Input
+                            <input
                               type="radio"
                               name="paymentMethod"
                               value="cash"
@@ -388,7 +388,7 @@ const CheckoutPage = () => {
                 </div>
 
                 <Link href="/products" onClick={handleSubmit}>
-                  <Button size={"lg"}>Continue & Pay</Button>
+                  <Button size={"lg"} className="w-full">Continue & Pay</Button>
                 </Link>
               </div>
             </div>
