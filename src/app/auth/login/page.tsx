@@ -13,6 +13,7 @@ import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { LoadingSpinner } from '@/components/ui/loading-spinner';
 import { toast } from 'sonner';
+import Image from 'next/image';
 
 export default function LoginPage() {
   const router = useRouter();
@@ -67,8 +68,8 @@ export default function LoginPage() {
     <div className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8">
         <div className="text-center">
-          <Link href="/" className="text-3xl font-bold tracking-wide text-black">
-            audiophile
+          <Link href="/">
+            <Image alt="audiophile logo" src="/assets/shared/desktop/logo.svg" width={143} height={25} />
           </Link>
           <h2 className="mt-6 text-3xl font-bold text-gray-900">
             Sign in to your account

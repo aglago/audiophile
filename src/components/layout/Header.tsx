@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useCartStore, type CartItem } from "@/lib/cart-store";
 import { Menu, X, Search, User } from "lucide-react";
@@ -9,6 +9,7 @@ import CartIcon from "../icons/cart";
 import { usePathname } from "next/navigation";
 import CategoriesSection from "../home/categories/CategoriesSection";
 import CartModal from "../cart/CartModal";
+import Image from "next/image";
 
 export const Header = () => {
   const pathname = usePathname();
@@ -22,6 +23,20 @@ export const Header = () => {
       0
     )
   );
+
+  // Disable body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    
+    // Cleanup on unmount
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMenuOpen]);
 
   const navigation = [
     { name: "Home", href: "/" },
@@ -56,8 +71,8 @@ export const Header = () => {
           </Button>
 
           {/* Logo */}
-          <Link href="/" className="text-2xl font-bold tracking-wide">
-            audiophile
+          <Link href="/">
+            <Image alt="audiophile logo" src="/assets/shared/desktop/logo.svg" width={143} height={25} />
           </Link>
 
           {/* Desktop Navigation */}
@@ -107,15 +122,26 @@ export const Header = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="lg:hidden border-t border-gray-800 bg-white z-[9999] pb-9 md:pb-16">
-            <CategoriesSection />
-          </div>
-        )}
+
       </div>
 
-      {/* Cart Modal */}
+      {/* Mobile Navigation Overlay */}
+      {isMenuOpen && (
+        <>
+          {/* Backdrop */}
+          <div 
+            className="fixed inset-0 bg-black/50 z-40 lg:hidden" 
+            onClick={() => setIsMenuOpen(false)}
+          />
+          {/* Menu Content */}
+          <div className="fixed left-0 top-24 right-0 bg-white z-50 lg:hidden max-h-screen overflow-y-auto">
+            <div className="pb-9 md:pb-16">
+              <CategoriesSection />
+            </div>
+          </div>
+        </>
+      )}
+
       <CartModal isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
     </header>
   );

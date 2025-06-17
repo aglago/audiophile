@@ -3,6 +3,7 @@ import Link from "next/link";
 import Facebook from "../icons/facebook";
 import Twitter from "../icons/twitter";
 import Instagram from "../icons/instagram";
+import Image from "next/image";
 
 export const Footer = () => {
   const footerNavigation = {
@@ -32,12 +33,9 @@ export const Footer = () => {
           {/* Brand and description */}
           <div className="h-1 w-[101px] bg-primary absolute top-0 mx-auto"></div>
           <div className="flex flex-col lg:flex-row place-items-center md:place-items-start w-full lg:justify-between gap-12">
-            <Link
-              href="/"
-              className="text-2xl font-bold tracking-wide text-white"
-            >
-              audiophile
-            </Link>
+            <Link href="/">
+            <Image alt="audiophile logo" src="/assets/shared/desktop/logo.svg" width={143} height={25} />
+          </Link>
             {/* Navigation links */}
             <div>
               <ul className="flex flex-col md:flex-row gap-9 items-center font-bold">
