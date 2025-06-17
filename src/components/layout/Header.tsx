@@ -124,7 +124,9 @@ export const Header = () => {
             <Button
               variant="ghost"
               size="sm"
-              className={`relative text-white hover:bg-gray-800 ${cartBounce ? 'cart-bounce' : ''}`}
+              className={`relative text-white hover:bg-gray-800 ${
+                cartBounce ? "cart-bounce" : ""
+              }`}
               onClick={() => setIsCartOpen(true)}
             >
               <CartIcon className="h-5 w-5" />
@@ -147,9 +149,16 @@ export const Header = () => {
             onClick={() => setIsMenuOpen(false)}
           />
           {/* Menu Content */}
-          <div className="fixed left-0 top-24 right-0 bg-white z-50 lg:hidden max-h-screen overflow-y-auto">
-            <div className="pb-9 md:pb-16">
-              <CategoriesSection onCategoryClick={() => setIsMenuOpen(false)} />
+          <div
+            className="fixed left-0 top-24 right-0 bg-white z-50 lg:hidden"
+            style={{ height: "calc(100vh - 6rem)" }}
+          >
+            <div className="h-full overflow-y-auto">
+              <div className="pb-16">
+                <CategoriesSection
+                  onCategoryClick={() => setIsMenuOpen(false)}
+                />
+              </div>
             </div>
           </div>
         </>
