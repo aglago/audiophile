@@ -17,19 +17,19 @@ const FeaturedProductsSection = () => {
                 src="/assets/home/desktop/pattern-circles.svg"
                 width={300}
                 height={300}
-                className="absolute -top-20 lg:-bottom-10 lg:-left-1/5 h-auto w-full scale-150 md:scale-100"
+                className="absolute -top-7 md:-top-36 lg:-bottom-10 lg:-left-1/5 h-auto w-full scale-150 md:scale-100"
               />
             </div>
 
             <div className="relative z-10 flex flex-1 flex-col lg:flex-row lg:items-center h-full">
               {/* Product Image */}
               <div className="flex-1 flex justify-center items-end lg:items-center pt-12 lg:pt-0 pb-8 lg:pb-0">
-                <div className="relative w-48 h-64 sm:w-56 sm:h-72 lg:w-80 lg:h-96">
+                <div className="relative lg:absolute lg:-bottom-[100px] w-48 h-64 sm:w-56 sm:h-72 lg:w-80 lg:h-96">
                   <Image
-                    src="/assets/product-zx9-speaker/desktop/image-product.jpg"
+                    src="/assets/home/desktop/image-speaker-zx9.png"
                     alt="ZX9 Speaker"
                     fill
-                    className="object-contain"
+                    className="object-cover lg:scale-120"
                     priority
                   />
                 </div>
@@ -48,7 +48,7 @@ const FeaturedProductsSection = () => {
                 </p>
 
                 <Link href="/products/zx9-speaker">
-                  <Button size={"lg"}>See Product</Button>
+                  <Button size={"lg"} variant={"secondary"}>See Product</Button>
                 </Link>
               </div>
             </div>
@@ -68,7 +68,7 @@ const FeaturedProductsSection = () => {
                   ZX7 SPEAKER
                 </h2>
                 <Link href="/products/zx7-speaker">
-                  <Button size={"lg"}>See Product</Button>
+                  <Button size={"lg"} variant={"outline"}>See Product</Button>
                 </Link>
               </div>
             </div>
@@ -93,7 +93,7 @@ const FeaturedProductsSection = () => {
                   YX1 EARPHONES
                 </h2>
                 <Link href="/products/yx1-earphones">
-                  <Button size={"lg"}>See Product</Button>
+                  <Button size={"lg"} variant={"outline"}>See Product</Button>
                 </Link>
               </div>
             </div>
