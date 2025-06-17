@@ -25,7 +25,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
     e.preventDefault();
     e.stopPropagation();
     
-    const cartItem: Omit<CartItem, 'quantity'> & { quantity?: number } = {
+    const cartItem: CartItem = {
       id: (product._id as number),
       name: product.name,
       price: product.price,

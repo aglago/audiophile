@@ -15,6 +15,7 @@ const buttonVariants = cva(
           "border border-black bg-background shadow-xs hover:bg-black hover:text-primary-foreground",
         ghost:
           "text-black/50 hover:text-primary",
+        inactive: "bg-black/50 hover:bg-primary-hover text-white w-full",
 
           /* SHADCN */
         destructive:

@@ -63,7 +63,7 @@ export default async function RootLayout({
     const isHomePage = pathname === "/";
 
   return (
-    <html lang="en">
+    <html lang="en" className='no-scrollbar'>
         <ClientSessionProvider session={session}>
       <body className={manrope.variable}>
           <div className="min-h-screen flex flex-col">

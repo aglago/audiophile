@@ -185,3 +185,11 @@
 .cart-bounce {
   animation: cartBounce 1s ease-in-out;
 }
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
