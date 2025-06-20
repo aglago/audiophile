@@ -1,6 +1,6 @@
 # E-commerce Website
 
-A modern full-stack e-commerce application built with Next.js, TypeScript, and MongoDB. This project demonstrates responsive design, shopping cart functionality, checkout process, and modern web development best practices.
+A modern full-stack e-commerce application built with Next.js, TypeScript, and MongoDB. This project demonstrates responsive design, shopping cart functionality, checkout process, and modern web development best practices. [View deployment here](https://itsaudiophile.vercel.app)
 
 ## 🖼️ Preview
 
